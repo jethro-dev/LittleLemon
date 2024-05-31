@@ -8,6 +8,7 @@ django = "*"
 djlint = "*"
 django-tailwind = {extras = ["reload"], version = "*"}
 djangorestframework = "*"
+djoser = "*"
 
 [dev-packages]
 
