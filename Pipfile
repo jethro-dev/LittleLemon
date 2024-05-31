@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
+djlint = "*"
+django-tailwind = {extras = ["reload"], version = "*"}
 
 [dev-packages]
 

@@ -1,10 +1,16 @@
-{% extends 'restaurant/base.html' %}
-
-{% block title %}Home{% endblock %}
-
+{% extends "restaurant/base.html" %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock title %}
 {% block content %}
-<h1>Welcome to Little Lemon!</h1>
-<p>Enjoy the best food in town at our cozy restaurant. We offer a wide variety of dishes made from the freshest ingredients.</p>
-<img src="{% static 'restaurant/images/logo.png' %}" alt="Little Lemon" style="width:100%;max-width:600px;">
-<p>Visit us for a dining experience you'll never forget.</p>
-{% endblock %}
+    <h1>Welcome to Little Lemon!</h1>
+    <p>
+        Enjoy the best food in town at our cozy restaurant. We offer a wide variety of dishes made from the freshest ingredients.
+    </p>
+    <img src="{% static 'restaurant/images/logo.png' %}"
+         alt="Little Lemon"
+         width="100%"
+         height="100%">
+    <p>"Visit us for a dining experience you'll never forget."</p>
+{% endblock content %}
