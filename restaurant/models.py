@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 
@@ -17,5 +18,14 @@ class MenuItem(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     inventory = models.IntegerField()
 
+    def __str__(self):
+        return self.title
+
     def get_item(self):
         return f'{self.title} : {str(self.price)}'
+
+    def clean(self):
+        if self.price < 0:
+            raise ValidationError('Price cannot be negative')
+        if self.inventory < 0:
+            raise ValidationError('Inventory cannot be negative')
